@@ -34,7 +34,7 @@
 
         <section class="clients">
             <h2>Select Clientele</h2>
-            <p>Raul Sergio has transformed the hair of:</p>
+            <p>Raul Sergio has transformed the style of:</p>
             <div class="client-grid">
                 <div class="client-item">Catherine Middleton</div>
                 <div class="client-item">Gwyneth Paltrow</div>
@@ -42,41 +42,143 @@
                 <div class="client-item">Tilda Swinton</div>
                 <div class="client-item">Julianne Moore</div>
                 <div class="client-item">Dwayne "The Rock" Johnson</div>
+                <div class="client-item">Jennifer Lawrence</div>
+                <div class="client-item">Emma Stone</div>
+                <div class="client-item">David Tennant</div>
+                <div class="client-item">Katherine Heigl</div>
+                <div class="client-item">Jenna Elfman</div>
+                <div class="client-item">Jessica Chastain</div>
+                <div class="client-item">Natalie Portman</div>
+                <div class="client-item">Kate Winslet</div>
+                <div class="client-item">Julianne Moore</div>
+                <div class="client-item">Zoë Kravitz</div>
+                <div class="client-item">Stanley Tucci</div>
+                <div class="client-item">Matt Smith</div>
+                <div class="client-item">Jessica Biel</div>
+                <div class="client-item">Maya Rudolph</div>
             </div>
         </section>
 
         <section class="services">
             <h2>Signature Services</h2>
             <div class="service-grid">
-                <a href="services/whispering_wind_cut.html" class="service-card">
+                <div class="service-card" data-service="whispering_wind">
                     <h3>The Whispering Wind Cut</h3>
                     <p>A bespoke cut tailored to your hair's natural flow and your soul's unspoken yearnings.</p>
-                </a>
-                <a href="services/lunar_lustre_treatment.html" class="service-card">
+                </div>
+                <div class="service-card" data-service="lunar_lustre">
                     <h3>The Lunar Lustre Treatment</h3>
                     <p>An ancient blend of rare oils and botanical extracts, infused under the full moon to impart unparalleled shine and vitality.</p>
-                </a>
-                <a href="services/solar_flare_treatment.html" class="service-card">
+                </div>
+                <div class="service-card" data-service="sunstone_sculpt">
                     <h3>The Sunstone Sculpt</h3>
                     <p>Bold and architectural styles that capture the light and command attention. For hair that dares to be seen.</p>
-                </a>
+                </div>
             
-                <a href="services/shadow_silk_smoothing.html" class="service-card">
+                <div class="service-card" data-service="shadow_silk">
                     <h3>The Shadow Silk Smoothing</h3>
                     <p>Taming unruly textures with a secret technique that leaves hair impossibly smooth and ethereally soft.</p>
-                </a>
-                <a href="services/ephemeral_elixir_consultation.html" class="service-card">
+                </div>
+                <div class="service-card" data-service="ephemeral_elixir">
                     <h3>The Ephemeral Elixir Consultation</h3>
                     <p>A private audience with Raul Sergio to diagnose your hair's unique needs and prescribe a personalized path to follicular nirvana.</p>
-                </a>
+                </div>
+            </div>
+
+    <!-- Service Modal Structure -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Contact Modal Structure -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <form id="contactForm" action="https://formspree.io/f/mlezlyew" method="POST">
+                <h2 class="modal-title">Request an Appointment</h2>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <input type="text" id="service" name="service" readonly>
+                </div>
+                <button type="submit" class="cta-button request-service">Submit Request</button>
+            </form>
+        </div>
+    </div>
+        </section>
+        
+        <section class="gallery-section">
+            <h2 class="gallery-title">Transformations Through Time</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../public/images/ChatGPT Image May 16, 2025, 01_36_50 PM.png" alt="Royal Wedding Transformation" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Royal Wedding 2011</h3>
+                        <p>Catherine Middleton's iconic bridal look</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../public/images/ChatGPT Image May 14, 2025, 12_57_23 PM.png" alt="Met Gala Transformation" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Met Gala 2006</h3>
+                        <p>Red carpet preparation for multiple A-list clients</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../public/images/Gemini_Generated_Image_781n2n781n2n781n.png" alt="Film Festival Glamour" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Venice Film Festival 2011</h3>
+                        <p>Signature looks for leading actresses</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../public/images/ChatGPT Image May 14, 2025, 12_50_59 PM.png" alt="Coachella Transformation" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Coachella 2018</h3>
+                        <p>Boho-chic styles for festival headliners</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../public/images/ChatGPT Image May 16, 2025, 02_02_03 PM.png" alt="Oscars Transformation" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Academy Awards 1999</h3>
+                        <p>Timeless Hollywood glamour for nominees</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../public/images/Gemini_Generated_Image_ot22nwot22nwot22.png" alt="Fashion Week Transformation" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Paris Fashion Week 2019</h3>
+                        <p>Avant-garde styling for Dior show</p>
+                    </div>
+                </div>
             </div>
         </section>
 
+        
         <section class="contact">
             <h2>Request an Audience</h2>
             <p>"The path to transformation begins with a request. Due to the deeply personal nature of his artistry, Raul Sergio accepts a limited number of engagements. Inquire with patience and intention, understanding that only those whose aesthetic aspirations resonate with his unique sensibilities will be considered for a personal invitation. Appointment scheduling remains at his discerning discretion."</p>
             <div class="cta">
-                <a href="mailto:inquiries@raulsergio.com" class="cta-button">Submit Your Request</a>
+                <button class="cta-button" data-modal="contactModal">Submit Your Request</button>
             </div>
         </section>
     </main>

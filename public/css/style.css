@@ -196,18 +196,70 @@ section {
   color: var(--text-dark);
 }
 
+/* Transformations Gallery */
+.gallery-section {
+    padding: 6rem 2rem;
+    background-color: var(--bg-light);
+}
+
+.gallery-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 25, 47, 0.8);
+    color: var(--secondary);
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
 /* Footer */
 footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--bg-light);
-  color: var(--secondary);
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-light);
+    color: var(--secondary);
 }
 
 .footer-note {
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  opacity: 0.8;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    opacity: 0.8;
 }
 
 /* Responsive */
@@ -219,4 +271,151 @@ footer {
   section {
     padding: 4rem 1rem;
   }
+}
+
+/* Modal Styles */
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 25, 47, 0.95);
+  overflow-y: auto;
+  padding: 20px 0;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-content {
+  background-color: var(--bg-light);
+  margin: 20px auto;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transform: translateY(-50%);
+  top: 50%;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--secondary);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: var(--accent);
+}
+
+.modal-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+.modal-title {
+  color: var(--secondary);
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-body {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.modal-image-container {
+  flex: 1;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.modal-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-text p {
+  margin-bottom: 2rem;
+}
+
+.modal .cta-button {
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 1rem 2rem;
+}
+
+/* Contact Form Styles */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.1);
+  color: var(--text-light);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#service {
+  background-color: rgba(255,255,255,0.05);
+  cursor: not-allowed;
 }
