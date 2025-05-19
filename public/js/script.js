@@ -1,5 +1,57 @@
 // Modal functionality for service cards
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize testimonial carousel
+    const carouselTrack = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.querySelector('.carousel-nav.prev');
+    const nextBtn = document.querySelector('.carousel-nav.next');
+    let currentIndex = 0;
+    let slideInterval;
+
+    // Set initial position
+    function setSlidePosition() {
+        carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Auto rotate slides every 5 seconds
+    function startCarousel() {
+        slideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            setSlidePosition();
+        }, 5000);
+    }
+
+    // Start auto-rotation
+    startCarousel();
+
+    // Pause on hover
+    carouselTrack.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+
+    carouselTrack.addEventListener('mouseleave', startCarousel);
+
+    // Navigation buttons
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        setSlidePosition();
+        resetInterval();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        setSlidePosition();
+        resetInterval();
+    });
+
+    function resetInterval() {
+        clearInterval(slideInterval);
+        startCarousel();
+    }
+
+    // Set initial position
+    setSlidePosition();
+
     // Get all service cards
     const serviceCards = document.querySelectorAll('.service-card');
     const modal = document.getElementById('serviceModal');
