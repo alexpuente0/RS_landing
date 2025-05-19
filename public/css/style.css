@@ -73,9 +73,9 @@ p {
 .hero {
   min-height: 100vh;
   background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95)), 
-              url('../images/craiyon_144318_a_stylish_middle_aged_heavy_se_man__with_gray_long_wavy_hair__and_modern_sunglasses.png');
-  background-size: cover;
-  background-position: center;
+              url('../images/bkg2.png') no-repeat;
+  background-size:contain;
+  background-position: left center;
   display: flex;
   flex-direction: column;
 }
