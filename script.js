@@ -64,61 +64,61 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "The Whispering Wind Cut",
       description:
         "A bespoke cut tailored to your hair's natural flow and your soul's unspoken yearnings.",
-      image: "../public/images/whispering_wind.png",
+      image: "/images/whispering_wind.png",
     },
     lunar_lustre: {
       title: "The Lunar Lustre Treatment",
       description:
         "An ancient blend of rare oils and botanical extracts, infused under the full moon to impart unparalleled shine and vitality.",
-      image: "../public/images/lunar_lustre_treatment.png",
+      image: "/images/lunar_lustre_treatment.png",
     },
     sunstone_sculpt: {
       title: "The Sunstone Sculpt",
       description:
         "Bold and architectural styles that capture the light and command attention. For hair that dares to be seen.",
-      image: "../public/images/sunstone_sculpt.png",
+      image: "/images/sunstone_sculpt.png",
     },
     shadow_silk: {
       title: "The Shadow Silk Smoothing",
       description:
         "Taming unruly textures with a secret technique that leaves hair impossibly smooth and ethereally soft.",
-      image: "../public/images/smoothing.png",
+      image: "/images/smoothing.png",
     },
     ephemeral_elixir: {
       title: "The Ephemeral Elixir Consultation",
       description:
         "A private audience with Raul Sergio to diagnose your hair's unique needs and prescribe a personalized path to follicular nirvana.",
-      image: "../public/images/consultation.png",
+      image: "/images/consultation.png",
     },
     corte_viento: {
       title: "El Corte de Viento Susurrante",
       description:
         "Un corte a medida adaptado al flujo natural de tu cabello y los anhelos no dichos de tu alma.",
-      image: "../public/images/whispering_wind.png",
+      image: "/images/whispering_wind.png",
     },
     brillo_lunar: {
       title: "El Tratamiento de Brillo Lunar",
       description:
         "Una mezcla ancestral de aceites raros y extractos botánicos, infundidos bajo la luna llena para impartir un brillo y vitalidad sin igual.",
-      image: "../public/images/lunar_lustre_treatment.png",
+      image: "/images/lunar_lustre_treatment.png",
     },
     piedra_solar: {
       title: "El Esculpido de Piedra Solar",
       description:
         "Estilos audaces y arquitectónicos que capturan la luz y demandan atención. Para cabello que se atreve a ser visto.",
-      image: "../public/images/sunstone_sculpt.png",
+      image: "/images/sunstone_sculpt.png",
     },
     seda_sombria: {
       title: "El Suavizado de Seda Sombria",
       description:
         "Domando texturas rebeldes con una técnica secreta que deja el cabello imposiblemente suave y etéreamente sedoso.",
-      image: "../public/images/smoothing.png",
+      image: "/images/smoothing.png",
     },
     elixir_efimero: {
       title: "Consulta de Elixir Efímero",
       description:
         "Una audiencia privada con Raul Sergio para diagnosticar las necesidades únicas de tu cabello y prescribir un camino personalizado hacia el nirvana folicular.",
-      image: "../public/images/consultation.png",
+      image: "/images/consultation.png",
     },
   };
 
